@@ -45,7 +45,7 @@
         .thak-styled {
             background-image: 
                 url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='%23000' fill-opacity='0.3'/%3E%3C/svg%3E"),
-                linear-gradient(180deg, rgba(241, 196, 15, 0.5) 0%, rgba(184, 134, 11, 0.7) 100%);
+                linear-gradient(180deg, rgba(241, 196, 15, 0.6) 0%, rgba(184, 134, 11, 0.7) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -114,7 +114,7 @@
 </head>
 <body class="font-sans overflow-x-hidden">
 
-    <!-- Scroll To Reveal Initial Hint -->
+    <!-- Initial Scroll To Reveal Hint -->
     <div id="initial-reveal-hint" class="fixed inset-0 z-[21] flex flex-col items-center justify-center pointer-events-none transition-opacity duration-1000">
         <p class="font-art italic text-white/40 text-2xl md:text-3xl tracking-[0.2em] animate-float uppercase">Scroll to reveal</p>
         <div class="w-px h-24 bg-gradient-to-b from-white/20 to-transparent mt-8"></div>
@@ -139,14 +139,14 @@
         <div class="spotlight-overlay" id="spotlight"></div>
         
         <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden px-6">
-            <!-- Central Visual (Reset to Full Size) -->
+            <!-- Central Visual (Chair) -->
             <div id="chair-container" class="absolute inset-0 z-10 opacity-30 scale-100 transition-all duration-1000 flex items-center justify-center pointer-events-none">
                 <img src="https://cdn.phototourl.com/free/2026-06-27-8499cd97-2557-462b-8bd7-f29390066430.png" 
                      alt="Baithak Chair" class="h-[75vh] w-auto object-contain">
             </div>
 
             <!-- Hero Typography -->
-            <div id="hero-content" class="relative z-30 w-full max-w-7xl px-8 flex flex-col items-center opacity-0 translate-y-10 transition-all duration-1000 text-center">
+            <div id="hero-content" class="relative z-30 w-full max-w-7xl flex flex-col items-center opacity-0 translate-y-10 transition-all duration-1000 text-center">
                 <h1 class="font-art font-black text-7xl md:text-[10rem] leading-none mb-8 tracking-tighter uppercase">
                     <span class="bai-styled">BAI</span><span class="thak-styled">THAK</span> <span class="four-zero-styled">4.0</span>
                 </h1>
@@ -161,26 +161,22 @@
     <!-- 3. Quick Info Grid -->
     <section class="px-8 py-24 bg-background">
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Venue -->
             <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center text-center group card-light-glow">
                 <div class="card-visual cover"><img src="https://cdn.phototourl.com/free/2026-06-27-dc1c9dfd-54c6-4241-be50-0d189912837f.jpg" alt="Venue" class="grayscale group-hover:grayscale-0 transition-all"></div>
                 <h3 class="font-syne font-bold text-2xl mb-1 uppercase tracking-tighter">Vapi</h3>
                 <p class="opacity-50 text-xs">Global Tea Cafe, Chharwada</p>
             </div>
-            <!-- Date -->
             <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center text-center group card-light-glow">
                 <div class="card-visual"><img src="https://cdn.phototourl.com/free/2026-06-27-1fc0bb48-b578-42df-bfdb-94d00888864e.png" alt="Date"></div>
                 <h3 class="font-syne font-bold text-2xl mb-1 uppercase tracking-tighter">July 11</h3>
                 <p class="opacity-50 text-xs">Saturday, 2026</p>
             </div>
-            <!-- Time -->
             <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center text-center group card-light-glow">
                 <div class="card-visual"><img src="https://cdn.phototourl.com/free/2026-06-27-12f454a4-e48b-4a54-9349-bfe16d40c7a3.png" alt="Time"></div>
                 <h3 class="font-syne font-bold text-2xl mb-1 uppercase tracking-tighter">4:00 PM</h3>
                 <p class="opacity-50 text-xs">Show Starts Onwards</p>
             </div>
-            <!-- Pass -->
-            <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center text-center group border-accent/20 bg-accent/[0.02] card-light-glow">
+            <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center text-center border-accent/20 bg-accent/[0.02] group card-light-glow">
                 <div class="card-visual"><img src="https://cdn.phototourl.com/free/2026-06-27-e800d74c-ff72-4725-b1d6-789fd9b06346.png" alt="Pass"></div>
                 <h3 class="font-syne font-bold text-2xl mb-1 text-accent uppercase tracking-tighter">₹99 onwards</h3>
                 <p class="opacity-50 text-xs">Audience Entry Pass</p>
@@ -195,7 +191,6 @@
             <p class="opacity-30 uppercase tracking-[0.2em] text-[10px]">The hearts behind the mic</p>
         </div>
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            <!-- Owner -->
             <div class="text-center group">
                 <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 glass p-2 grayscale group-hover:grayscale-0 transition-all border border-accent/20">
                     <img src="https://cdn.phototourl.com/free/2026-06-27-b25af858-6cb2-47b6-9134-ee0ceadc411b.jpg" class="w-full h-full object-cover rounded-full" alt="Ashwin Tiwari">
@@ -204,7 +199,6 @@
                 <p class="text-accent text-[10px] font-bold uppercase tracking-widest mb-2 opacity-60">Owner</p>
                 <a href="https://www.instagram.com/ashuu_0695/" target="_blank" class="text-xs opacity-40 hover:opacity-100 transition-opacity">@ashuu_0695</a>
             </div>
-            <!-- Founder -->
             <div class="text-center group">
                 <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 glass p-2 border-white/10 border grayscale group-hover:grayscale-0 transition-all">
                     <img src="https://cdn.phototourl.com/free/2026-06-27-23b29472-110f-4050-9d71-e694f0d0d918.jpg" class="w-full h-full object-cover rounded-full" alt="Praveen">
@@ -213,7 +207,6 @@
                 <p class="text-white text-[10px] font-bold uppercase tracking-widest mb-2 opacity-50">Founder</p>
                 <a href="https://www.instagram.com/_praveen_74/" target="_blank" class="text-xs opacity-40 hover:opacity-100 transition-opacity">@_praveen_74</a>
             </div>
-            <!-- Co-Founder -->
             <div class="text-center group">
                 <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 glass p-2 grayscale group-hover:grayscale-0 transition-all border border-accent/20">
                     <img src="https://cdn.phototourl.com/free/2026-06-27-4f6b897e-cbf2-4ed6-a217-3153796e23e5.jpg" class="w-full h-full object-cover rounded-full" alt="Om Tiwari">
@@ -225,46 +218,63 @@
         </div>
     </section>
 
-    <!-- 5. Legacy Gallery (Baithak 3.0) -->
+    <!-- 5. Legacy Gallery -->
     <section id="gallery" class="px-8 py-32 bg-black border-t border-white/5">
         <h2 class="font-art font-bold text-5xl text-center mb-20 uppercase tracking-tighter text-white opacity-40 italic">Legacy of 3.0</h2>
         <div class="max-w-7xl mx-auto masonry">
-            <div class="masonry-item rounded-[2.5rem] overflow-hidden group">
-                <img src="https://cdn.phototourl.com/free/2026-06-27-5cd26591-dec3-45aa-8d10-c8488519f708.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all">
+            <div class="masonry-item rounded-[2.5rem] overflow-hidden group"><img src="https://cdn.phototourl.com/free/2026-06-27-5cd26591-dec3-45aa-8d10-c8488519f708.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all"></div>
+            <div class="masonry-item rounded-[2.5rem] overflow-hidden group"><img src="https://cdn.phototourl.com/free/2026-06-27-ebe846a9-0f9d-4e46-84ae-1e682234a8e4.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all"></div>
+            <div class="masonry-item rounded-[2.5rem] overflow-hidden group"><img src="https://cdn.phototourl.com/free/2026-06-27-ccdb1773-f2a6-49d0-970f-670ce5d773f1.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all"></div>
+        </div>
+    </section>
+
+    <!-- 6. Simplified Pricing -->
+    <section class="px-8 py-32 bg-surface border-t border-white/5">
+        <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] text-center card-light-glow">
+            <div class="bg-accent h-12 flex items-center justify-center rounded-t-[2rem] -mt-12 -mx-12 mb-12">
+                <span class="text-black font-bold uppercase tracking-widest text-sm">Select Your Pass</span>
             </div>
-            <div class="masonry-item rounded-[2.5rem] overflow-hidden group">
-                <img src="https://cdn.phototourl.com/free/2026-06-27-ebe846a9-0f9d-4e46-84ae-1e682234a8e4.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all">
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="p-8 bg-black/40 rounded-[2.5rem] border border-accent/20 text-center">
+                    <h4 class="font-art text-xl text-white mb-2 uppercase opacity-60">Audience</h4>
+                    <span class="font-art text-5xl text-white font-black tracking-tighter">₹99</span>
+                </div>
+                <div class="p-8 bg-black/40 rounded-[2.5rem] border border-accent/20 text-center">
+                    <h4 class="font-art text-xl text-white mb-2 uppercase opacity-60">Performer</h4>
+                    <span class="font-art text-5xl text-white font-black tracking-tighter">₹79</span>
+                </div>
             </div>
-            <div class="masonry-item rounded-[2.5rem] overflow-hidden group">
-                <img src="https://cdn.phototourl.com/free/2026-06-27-ccdb1773-f2a6-49d0-970f-670ce5d773f1.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all">
+            <div class="max-w-md mx-auto">
+                <a href="https://utsavs.app/events/baithak-open-mic-40---anniversary-special-zkkji" target="_blank" class="inline-block w-full bg-white text-black font-bold py-5 rounded-full text-center hover:bg-primary transition-all uppercase text-sm tracking-[0.2em]">Secure Online Pass</a>
+                <p class="mt-6 opacity-30 text-xs italic">Limited tickets available via Utsavs platform.</p>
             </div>
         </div>
     </section>
 
-    <!-- 7. Registration Rules -->
-    <section id="participate" class="max-w-5xl mx-auto px-8 py-32 border-t border-white/5">
+    <!-- 7. Performer Rules -->
+    <section id="participate" class="max-w-5xl mx-auto px-8 py-32">
         <h2 class="font-art font-bold text-5xl text-center mb-4 uppercase tracking-tighter text-white">Performer Rules</h2>
         <p class="text-center opacity-40 mb-20 text-[10px] tracking-[0.4em] uppercase font-bold">3 Steps to the spotlight</p>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="glass p-12 rounded-[3rem] group card-light-glow">
                 <div class="w-12 h-12 glass rounded-full flex items-center justify-center font-bold mb-8 group-hover:bg-white group-hover:text-black transition-all">1</div>
-                <h4 class="font-serif font-bold text-2xl mb-4 text-white">Share Story</h4>
+                <h4 class="font-art font-bold text-2xl mb-4 text-white">Share Story</h4>
                 <p class="opacity-50 text-sm leading-relaxed">Put our recent 4.0 announcement reel or post on your Instagram Story and share it with friends.</p>
             </div>
             <div class="glass p-12 rounded-[3rem] group card-light-glow">
                 <div class="w-12 h-12 glass rounded-full flex items-center justify-center font-bold mb-8 group-hover:bg-white group-hover:text-black transition-all">2</div>
-                <h4 class="font-serif font-bold text-2xl mb-4 text-white">Tag Us</h4>
+                <h4 class="font-art font-bold text-2xl mb-4 text-white">Tag Us</h4>
                 <p class="opacity-50 text-sm leading-relaxed">Tag <strong>@baithak.vapi</strong> in your story so our curators can verify and review your entry.</p>
             </div>
             <div class="glass p-12 rounded-[3rem] border-accent/20 group card-light-glow">
                 <div class="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center font-bold mb-8">3</div>
                 <h4 class="font-art font-bold text-2xl mb-4 text-white">Redeem Code</h4>
-                <p class="opacity-50 text-sm leading-relaxed">DM us to collect your registration redeem code. First 10 performer entries are <strong>FREE</strong>!</p>
+                <p class="opacity-50 text-sm leading-relaxed">DM us to collect your registration redeem code. Use code for discount on Performer Ticket!</p>
             </div>
         </div>
     </section>
 
-    <!-- 8. Venue Details with BLACK THEME MAP -->
+    <!-- 8. Venue -->
     <section id="venue" class="px-8 py-32 bg-black border-t border-white/5">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
             <div class="md:w-1/2">
@@ -280,7 +290,6 @@
                     <a href="https://maps.app.goo.gl/nv3eZBwMgDAAcSwU8" target="_blank" class="inline-flex items-center gap-3 font-bold hover:gap-6 transition-all uppercase text-[10px] tracking-[0.4em] text-accent">Open In Google Maps <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
                 </div>
             </div>
-            <!-- REAL GOOGLE MAP WITH BLACK THEME FILTER -->
             <div class="md:w-1/2 w-full h-[450px] rounded-[3rem] overflow-hidden glass border border-white/5">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.16543132711!2d72.9234857752402!3d20.375376510123564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0ce00389360df%3A0x673999990710609a!2sGlobal%20Tea%20Cafe!5e0!3m2!1sen!2sin!4v1719503463991!5m2!1sen!2sin" 
                 class="map-black" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -290,7 +299,6 @@
 
     <!-- 9. Footer -->
     <footer class="bg-background pt-40 pb-16 relative overflow-hidden text-center">
-        <!-- Giant Background Text with colors -->
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 font-art font-black text-[20vw] opacity-[0.03] leading-none select-none pointer-events-none uppercase tracking-tighter">
             <span class="bai-styled">BAI</span><span class="thak-styled">THAK</span>
         </div>
@@ -323,7 +331,6 @@
             const scrollY = window.scrollY;
             const vh = window.innerHeight;
             
-            // Fading out the initial reveal hint
             initialHint.style.opacity = Math.max(0, 1 - (scrollY / 300));
 
             const spotlightProgress = Math.min(scrollY / (vh * 1.5), 1);
