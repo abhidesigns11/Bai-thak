@@ -65,7 +65,7 @@
 
         /* LIGHT LOW GLOW BORDERS FOR ALL CARDS */
         .card-light-glow {
-            border: 1px solid rgba(230, 126, 34, 0.1);
+            border: 1px solid rgba(230, 126, 34, 0.12);
             box-shadow: 0 0 20px rgba(230, 126, 34, 0.02);
             transition: all 0.4s ease;
         }
@@ -104,7 +104,6 @@
         .card-visual img { width: 90%; height: 90%; object-fit: contain; }
         .card-visual.cover img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
 
-        /* Animation for Scroll Hint */
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
@@ -114,7 +113,7 @@
 </head>
 <body class="font-sans overflow-x-hidden">
 
-    <!-- Initial Scroll To Reveal Hint -->
+    <!-- Scroll Hint -->
     <div id="initial-reveal-hint" class="fixed inset-0 z-[21] flex flex-col items-center justify-center pointer-events-none transition-opacity duration-1000">
         <p class="font-art italic text-white/40 text-2xl md:text-3xl tracking-[0.2em] animate-float uppercase">Scroll to reveal</p>
         <div class="w-px h-24 bg-gradient-to-b from-white/20 to-transparent mt-8"></div>
@@ -134,23 +133,19 @@
         <a href="https://utsavs.app/events/baithak-open-mic-40---anniversary-special-zkkji" target="_blank" class="bg-white text-black text-sm font-bold px-6 py-2 rounded-full hover:scale-95 transition-transform shrink-0">Book Tickets</a>
     </nav>
 
-    <!-- 2. Hero Reveal Section -->
+    <!-- 2. Hero Reveal -->
     <section class="relative h-[300vh] bg-black !z-10" id="hero">
         <div class="spotlight-overlay" id="spotlight"></div>
-        
         <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden px-6">
-            <!-- Central Visual (Chair) -->
             <div id="chair-container" class="absolute inset-0 z-10 opacity-30 scale-100 transition-all duration-1000 flex items-center justify-center pointer-events-none">
-                <img src="https://cdn.phototourl.com/free/2026-06-27-8499cd97-2557-462b-8bd7-f29390066430.png" 
-                     alt="Baithak Chair" class="h-[75vh] w-auto object-contain">
+                <img src="https://cdn.phototourl.com/free/2026-06-27-8499cd97-2557-462b-8bd7-f29390066430.png" alt="Baithak Chair" class="h-[75vh] w-auto object-contain">
             </div>
 
-            <!-- Hero Typography -->
             <div id="hero-content" class="relative z-30 w-full max-w-7xl flex flex-col items-center opacity-0 translate-y-10 transition-all duration-1000 text-center">
                 <h1 class="font-art font-black text-7xl md:text-[10rem] leading-none mb-8 tracking-tighter uppercase">
                     <span class="bai-styled">BAI</span><span class="thak-styled">THAK</span> <span class="four-zero-styled">4.0</span>
                 </h1>
-                <p class="anniversary-typo text-xl md:text-3xl opacity-50 mb-12">Anniversary Special</p>
+                <p class="anniversary-typo text-xl md:text-3xl opacity-50 mb-12 text-white">Anniversary Special</p>
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="https://utsavs.app/events/baithak-open-mic-40---anniversary-special-zkkji" target="_blank" class="bg-white text-black font-bold px-10 py-4 rounded-full text-sm transition-all hover:scale-105">Get Tickets (₹99)</a>
                 </div>
@@ -176,7 +171,7 @@
                 <h3 class="font-syne font-bold text-2xl mb-1 uppercase tracking-tighter">4:00 PM</h3>
                 <p class="opacity-50 text-xs">Show Starts Onwards</p>
             </div>
-            <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center text-center border-accent/20 bg-accent/[0.02] group card-light-glow">
+            <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center text-center group border-accent/20 bg-accent/[0.02] card-light-glow">
                 <div class="card-visual"><img src="https://cdn.phototourl.com/free/2026-06-27-e800d74c-ff72-4725-b1d6-789fd9b06346.png" alt="Pass"></div>
                 <h3 class="font-syne font-bold text-2xl mb-1 text-accent uppercase tracking-tighter">₹99 onwards</h3>
                 <p class="opacity-50 text-xs">Audience Entry Pass</p>
@@ -184,13 +179,13 @@
         </div>
     </section>
 
-    <!-- 4. Visionaries -->
+    <!-- 4. Team (Owners Only) -->
     <section id="team" class="px-8 py-32 bg-surface">
         <div class="max-w-7xl mx-auto text-center mb-20">
             <h2 class="font-art font-bold text-5xl mb-4 italic text-white">The Visionaries</h2>
             <p class="opacity-30 uppercase tracking-[0.2em] text-[10px]">The hearts behind the mic</p>
         </div>
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
             <div class="text-center group">
                 <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 glass p-2 grayscale group-hover:grayscale-0 transition-all border border-accent/20">
                     <img src="https://cdn.phototourl.com/free/2026-06-27-b25af858-6cb2-47b6-9134-ee0ceadc411b.jpg" class="w-full h-full object-cover rounded-full" alt="Ashwin Tiwari">
@@ -207,14 +202,6 @@
                 <p class="text-white text-[10px] font-bold uppercase tracking-widest mb-2 opacity-50">Founder</p>
                 <a href="https://www.instagram.com/_praveen_74/" target="_blank" class="text-xs opacity-40 hover:opacity-100 transition-opacity">@_praveen_74</a>
             </div>
-            <div class="text-center group">
-                <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 glass p-2 grayscale group-hover:grayscale-0 transition-all border border-accent/20">
-                    <img src="https://cdn.phototourl.com/free/2026-06-27-4f6b897e-cbf2-4ed6-a217-3153796e23e5.jpg" class="w-full h-full object-cover rounded-full" alt="Om Tiwari">
-                </div>
-                <h4 class="font-art font-bold text-2xl mb-1">Om Tiwari</h4>
-                <p class="text-accent text-[10px] font-bold uppercase tracking-widest mb-2 opacity-60">Co-Founder</p>
-                <a href="https://www.instagram.com/swamisuii/" target="_blank" class="text-xs opacity-40 hover:opacity-100 transition-opacity">@swamisuii</a>
-            </div>
         </div>
     </section>
 
@@ -228,31 +215,26 @@
         </div>
     </section>
 
-    <!-- 6. Simplified Pricing -->
+    <!-- 6. Pricing (Simplified) -->
     <section class="px-8 py-32 bg-surface border-t border-white/5">
         <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] text-center card-light-glow">
-            <div class="bg-accent h-12 flex items-center justify-center rounded-t-[2rem] -mt-12 -mx-12 mb-12">
-                <span class="text-black font-bold uppercase tracking-widest text-sm">Select Your Pass</span>
-            </div>
+            <h2 class="font-art text-4xl mb-12 uppercase tracking-tighter text-white">Ticket Selection</h2>
             <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="p-8 bg-black/40 rounded-[2.5rem] border border-accent/20 text-center">
-                    <h4 class="font-art text-xl text-white mb-2 uppercase opacity-60">Audience</h4>
-                    <span class="font-art text-5xl text-white font-black tracking-tighter">₹99</span>
+                <div class="p-8 bg-black/40 rounded-[2.5rem] border border-accent/20">
+                    <h4 class="font-art text-xl text-white mb-2 opacity-60">Audience</h4>
+                    <span class="font-art text-5xl text-white">₹99</span>
                 </div>
-                <div class="p-8 bg-black/40 rounded-[2.5rem] border border-accent/20 text-center">
-                    <h4 class="font-art text-xl text-white mb-2 uppercase opacity-60">Performer</h4>
-                    <span class="font-art text-5xl text-white font-black tracking-tighter">₹79</span>
+                <div class="p-8 bg-black/40 rounded-[2.5rem] border border-accent/20">
+                    <h4 class="font-art text-xl text-white mb-2 opacity-60">Performer</h4>
+                    <span class="font-art text-5xl text-white">₹79</span>
                 </div>
             </div>
-            <div class="max-w-md mx-auto">
-                <a href="https://utsavs.app/events/baithak-open-mic-40---anniversary-special-zkkji" target="_blank" class="inline-block w-full bg-white text-black font-bold py-5 rounded-full text-center hover:bg-primary transition-all uppercase text-sm tracking-[0.2em]">Secure Online Pass</a>
-                <p class="mt-6 opacity-30 text-xs italic">Limited tickets available via Utsavs platform.</p>
-            </div>
+            <a href="https://utsavs.app/events/baithak-open-mic-40---anniversary-special-zkkji" target="_blank" class="inline-block w-full max-w-md bg-white text-black font-bold py-5 rounded-full text-center hover:bg-primary transition-all uppercase text-sm tracking-widest">Register via Utsavs</a>
         </div>
     </section>
 
-    <!-- 7. Performer Rules -->
-    <section id="participate" class="max-w-5xl mx-auto px-8 py-32">
+    <!-- 7. Registration Steps -->
+    <section id="participate" class="max-w-5xl mx-auto px-8 py-32 border-t border-white/5">
         <h2 class="font-art font-bold text-5xl text-center mb-4 uppercase tracking-tighter text-white">Performer Rules</h2>
         <p class="text-center opacity-40 mb-20 text-[10px] tracking-[0.4em] uppercase font-bold">3 Steps to the spotlight</p>
         <div class="grid md:grid-cols-3 gap-8">
@@ -299,6 +281,7 @@
 
     <!-- 9. Footer -->
     <footer class="bg-background pt-40 pb-16 relative overflow-hidden text-center">
+        <!-- Giant Background Text -->
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 font-art font-black text-[20vw] opacity-[0.03] leading-none select-none pointer-events-none uppercase tracking-tighter">
             <span class="bai-styled">BAI</span><span class="thak-styled">THAK</span>
         </div>
@@ -307,14 +290,25 @@
             <div class="font-art font-black text-5xl tracking-tighter uppercase mb-12">
                 <span class="bai-styled">BAI</span><span class="thak-styled">THAK</span> <span class="four-zero-styled">4.0</span>
             </div>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-12 mb-20 opacity-50 font-bold tracking-widest uppercase text-xs">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12 mb-16 opacity-50 font-bold tracking-widest uppercase text-xs">
                 <a href="https://www.instagram.com/baithak.vapi/" target="_blank" class="hover:text-white transition-all">Instagram</a>
                 <a href="mailto:baithak.vapi@gmail.com" class="hover:text-white transition-all">Contact Us</a>
             </div>
-            <div class="pt-8 border-t border-white/5">
-                <p class="text-[9px] uppercase tracking-[0.5em] font-bold">
+            <div class="pt-8 border-t border-white/5 space-y-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto text-[10px] font-bold uppercase tracking-wider opacity-60">
+                    <a href="https://www.instagram.com/shubhaarambh_events_2025/" target="_blank" class="hover:text-white transition-all"><span class="bai-styled">Sponsored by</span><br>@SHUBHAARAMBH_EVENTS_2025</a>
+                    <a href="https://www.instagram.com/utsavs.app/" target="_blank" class="hover:text-white transition-all"><span class="thak-styled">Platform partner</span><br>@UTSAVS.APP</a>
+                    <div class="flex flex-col gap-1">
+                        <span class="bai-styled">Media manager</span>
+                        <div class="flex justify-center gap-2">
+                            <a href="https://www.instagram.com/media.makers_/" target="_blank" class="hover:text-white transition-all">@media.makers_</a>
+                            <a href="https://www.instagram.com/our_vapi/" target="_blank" class="hover:text-white transition-all">@our_vapi</a>
+                        </div>
+                    </div>
+                    <a href="https://www.instagram.com/abhi.designs__/" target="_blank" class="hover:text-white transition-all"><span class="thak-styled">Website manage</span><br>@abhi.designs__</a>
+                </div>
+                <p class="text-[9px] uppercase tracking-[0.5em] font-bold pt-8">
                     <span class="bai-styled !opacity-50">© 2026 BAITHAK VAPI.</span> 
-                    <span class="thak-styled !opacity-50 ml-2">POWERED BY UTSAVS.APP</span>
                 </p>
             </div>
         </div>
@@ -330,16 +324,12 @@
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const vh = window.innerHeight;
-            
             initialHint.style.opacity = Math.max(0, 1 - (scrollY / 300));
-
             const spotlightProgress = Math.min(scrollY / (vh * 1.5), 1);
             const radius = 10 + (spotlightProgress * 140); 
             spotlight.style.background = `radial-gradient(circle at 50% 0%, transparent 0%, transparent ${radius}%, #000 ${radius + 15}%)`;
-
             if (scrollY > 40) { chairContainer.style.opacity = Math.min(0.3 + (spotlightProgress * 2), 1); } 
             else { chairContainer.style.opacity = '0.3'; }
-
             const revealTrigger = vh * 0.6;
             if (scrollY > revealTrigger) {
                 heroContent.style.opacity = '1';
@@ -356,4 +346,4 @@
         spotlight.style.background = `radial-gradient(circle at 50% 0%, transparent 10%, #000 25%)`;
     </script>
 </body>
-</html>
+                    </html>
