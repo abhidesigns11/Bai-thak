@@ -33,36 +33,35 @@
         body { background-color: #000; color: #e5e2e1; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
         
-        /* WOW TYPOGRAPHY & MINIATURE ART (50% Faded) */
+        /* TYPOGRAPHY Detailing */
         .bai-styled {
             background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l20 20M10 0l10 10M0 10l10 10' stroke='%23000' stroke-width='0.5' stroke-opacity='0.2' fill='none'/%3E%3C/svg%3E"),
-                linear-gradient(180deg, rgba(211, 84, 0, 0.5) 0%, rgba(139, 52, 0, 0.6) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+                linear-gradient(180deg, rgba(211, 84, 0, 0.5) 0%, rgba(139, 52, 0, 0.7) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
         .thak-styled {
             background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='%23000' fill-opacity='0.2'/%3E%3C/svg%3E"),
-                linear-gradient(180deg, rgba(241, 196, 15, 0.5) 0%, rgba(184, 134, 11, 0.6) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+                linear-gradient(180deg, rgba(241, 196, 15, 0.6) 0%, rgba(184, 134, 11, 0.7) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
-        .four-zero-styled { background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(150, 150, 150, 0.2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .four-zero-styled { background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(150, 150, 150, 0.2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .anniversary-typo { font-family: 'Fraunces', serif; font-style: italic; letter-spacing: 0.15em; text-transform: uppercase; }
 
-        /* REPEATABLE CINEMATIC ANIMATIONS (2.5s) */
-        .reveal { opacity: 0; transition: all 2.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal-up { transform: translateY(60px); }
-        .reveal-left { transform: translateX(-60px); }
-        .reveal-right { transform: translateX(60px); }
+        /* REPEATABLE SLOW CINEMATIC ANIMATIONS (2.5s) */
+        .reveal { opacity: 0; transition: all 2.5s cubic-bezier(0.16, 1, 0.3, 1); will-change: transform, opacity; }
+        .reveal-up { transform: translateY(80px); }
+        .reveal-left { transform: translateX(-80px); }
+        .reveal-right { transform: translateX(80px); }
         .reveal-scale { transform: scale(0.9); }
         .active { opacity: 1 !important; transform: translate(0) scale(1) !important; }
 
         /* IMAGE HOVER EFFECTS */
+        .team-avatar img { filter: grayscale(100%); transition: filter 1s ease; }
+        .team-avatar:hover img { filter: grayscale(0%); }
         .gallery-link img { filter: grayscale(100%); transition: all 1.2s ease; }
         .gallery-link:hover img { filter: grayscale(0%); transform: scale(1.05); }
-        .team-avatar img { filter: grayscale(100%); transition: 1s ease; }
-        .team-avatar:hover img { filter: grayscale(0%); }
 
+        .card-light-glow { border: 1px solid rgba(230, 126, 34, 0.12); box-shadow: 0 0 15px rgba(230, 126, 34, 0.02); }
         .map-black { filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%) grayscale(100%); border-radius: 3rem; width: 100%; height: 100%; }
         .spotlight-overlay { position: fixed; inset: 0; background: radial-gradient(circle at 50% 0%, transparent 10%, #000 25%); z-index: 20; pointer-events: none; }
         
@@ -70,6 +69,7 @@
         ::-webkit-scrollbar-track { background: #000; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
         
+        section { position: relative; z-index: 40; }
         .card-visual { height: 180px; width: 100%; border-radius: 1.5rem; overflow: hidden; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.02); }
         .card-visual img { width: 90%; height: 90%; object-fit: contain; }
         .card-visual.cover img { width: 100%; height: 100%; object-fit: cover; }
@@ -104,13 +104,11 @@
     <section class="relative h-[300vh] bg-black !z-10" id="hero">
         <div class="spotlight-overlay" id="spotlight"></div>
         <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden px-6">
-            <!-- Syncing Chair Animation with Zoom Effect -->
             <div id="chair-container" class="absolute inset-0 z-10 opacity-30 flex items-center justify-center pointer-events-none transition-all duration-700 ease-out">
                 <img src="https://cdn.phototourl.com/free/2026-06-27-8499cd97-2557-462b-8bd7-f29390066430.png" 
                      alt="Baithak Chair" id="chair-img" class="h-[75vh] w-auto object-contain transform scale-90 transition-transform duration-1000">
             </div>
 
-            <!-- Hero Typography -->
             <div id="hero-content" class="relative z-30 w-full max-w-7xl flex flex-col items-center opacity-0 translate-y-10 transition-all duration-1000 text-center">
                 <h1 class="font-art font-black text-7xl md:text-[10rem] leading-none mb-8 tracking-tighter uppercase reveal reveal-scale">
                     <span class="bai-styled">BAI</span><span class="thak-styled">THAK</span> <span class="four-zero-styled">4.0</span>
@@ -123,13 +121,13 @@
         </div>
     </section>
 
-    <!-- 3. Quick Info Grid -->
+    <!-- 3. Quick Info Grid (Colorful) -->
     <section class="px-8 py-24 bg-background overflow-hidden">
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center text-center group border border-white/5 reveal reveal-left">
                 <div class="card-visual cover"><img src="https://cdn.phototourl.com/free/2026-06-27-dc1c9dfd-54c6-4241-be50-0d189912837f.jpg" class="object-cover w-full h-full"></div>
                 <h3 class="font-syne font-bold text-2xl mb-1 uppercase text-brandOrange">Vapi</h3>
-                <p class="opacity-50 text-xs">Global Tea Cafe</p>
+                <p class="opacity-50 text-xs text-white">Global Tea Cafe</p>
             </div>
             <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center text-center group border border-white/5 reveal reveal-up">
                 <div class="card-visual"><img src="https://cdn.phototourl.com/free/2026-06-27-1fc0bb48-b578-42df-bfdb-94d00888864e.png"></div>
@@ -149,13 +147,13 @@
         </div>
     </section>
 
-    <!-- 4. Performer Cards -->
+    <!-- 4. Performer Cards (Colorful) -->
     <section id="performers" class="px-8 py-32 bg-surface border-t border-white/5 overflow-hidden text-center">
         <h2 class="font-art font-bold text-5xl mb-16 italic text-white uppercase reveal reveal-scale">The Headliners</h2>
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="glass p-6 rounded-[2.5rem] flex flex-col items-center card-light-glow reveal reveal-up">
                 <div class="w-full aspect-square rounded-[2rem] overflow-hidden mb-6"><img src="https://cdn.phototourl.com/free/2026-06-29-e1d112f8-c672-403a-a40c-6edfe6deef33.jpg" class="w-full h-full object-cover"></div>
-                <h4 class="font-art font-bold text-2xl">Nadeem</h4>
+                <h4 class="font-art font-bold text-2xl text-white">Nadeem</h4>
                 <p class="text-accent text-[10px] font-bold uppercase opacity-60">Rap Music</p>
             </div>
             <div class="glass p-6 rounded-[2.5rem] flex flex-col items-center card-light-glow reveal reveal-up">
@@ -165,18 +163,18 @@
             </div>
             <div class="glass p-6 rounded-[2.5rem] flex flex-col items-center card-light-glow reveal reveal-up">
                 <div class="w-full aspect-square rounded-[2rem] overflow-hidden mb-6"><img src="https://cdn.phototourl.com/free/2026-06-29-cb44e480-00bf-4da1-bc27-6a6221604bd2.jpg" class="w-full h-full object-cover"></div>
-                <h4 class="font-art font-bold text-2xl text-white text-center">Suraj Prakash Mandal</h4>
+                <h4 class="font-art font-bold text-2xl text-white">Suraj Prakash Mandal</h4>
                 <p class="text-accent text-[10px] font-bold uppercase opacity-60">Stand up Comedy</p>
             </div>
             <div class="glass p-6 rounded-[2.5rem] flex flex-col items-center card-light-glow reveal reveal-up">
                 <div class="w-full aspect-square rounded-[2rem] overflow-hidden mb-6"><img src="https://cdn.phototourl.com/free/2026-06-29-2f7a775b-f025-45df-959c-56aaa36bfcd9.jpg" class="w-full h-full object-cover"></div>
-                <h4 class="font-art font-bold text-2xl text-white text-center">Janvi Gupta</h4>
+                <h4 class="font-art font-bold text-2xl text-white">Janvi Gupta</h4>
                 <p class="text-accent text-[10px] font-bold uppercase opacity-60">Singing</p>
             </div>
         </div>
     </section>
 
-    <!-- 5. Visionaries -->
+    <!-- 5. Visionaries (Color Hover Effect) -->
     <section id="team" class="px-8 py-32 bg-background overflow-hidden text-center">
         <h2 class="font-art font-bold text-5xl mb-24 italic text-white reveal reveal-up">The Visionaries</h2>
         <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -199,7 +197,7 @@
         </div>
     </section>
 
-    <!-- 6. Gallery -->
+    <!-- 6. Perfectly Aligned Gallery (Clickable & Color Hover) -->
     <section id="gallery" class="px-8 py-32 bg-black border-t border-white/5 text-center">
         <h2 class="font-art font-bold text-5xl mb-20 uppercase text-white opacity-40 italic reveal reveal-up">Legacy of 3.0</h2>
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 justify-center items-center px-4">
@@ -209,7 +207,7 @@
         </div>
     </section>
 
-    <!-- 7. Venue Section -->
+    <!-- 7. Map -->
     <section id="venue" class="px-8 py-32 bg-black border-t border-white/5 overflow-hidden">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
             <div class="md:w-1/2 reveal reveal-left text-left">
@@ -230,8 +228,8 @@
 
     <!-- 8. Footer -->
     <footer class="bg-background pt-40 pb-32 relative overflow-hidden text-center border-t border-white/5">
-        <!-- Giant Background Text with spacing and colors -->
-        <div class="absolute bottom-[10%] left-0 w-full font-art font-black text-[12vw] opacity-[0.03] leading-none pointer-events-none uppercase tracking-[0.8em] flex justify-center whitespace-nowrap overflow-hidden">
+        <!-- Spaced Giant Background Text (Correctly Centered) -->
+        <div class="absolute bottom-0 left-0 w-full font-art font-black text-[15vw] opacity-[0.03] leading-none select-none pointer-events-none uppercase tracking-[0.8em] flex justify-center whitespace-nowrap overflow-hidden">
             <span class="bai-styled">BAI</span><span class="thak-styled">THAK</span>
         </div>
         
@@ -256,11 +254,11 @@
     </footer>
 
     <script>
-        // Directional Repeatable Observer
+        // Repeatable Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) { entry.target.classList.add('active'); }
-                else { entry.target.classList.remove('active'); } 
+                else { entry.target.classList.remove('active'); } // Animation repeats on scroll up/down
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
@@ -272,17 +270,17 @@
             const radius = 10 + (spotlightProgress * 140); 
             document.getElementById('spotlight').style.background = `radial-gradient(circle at 50% 0%, transparent 0%, transparent ${radius}%, #000 ${radius + 15}%)`;
             
-            // CHAIR ZOOM SYNC from snippet logic
+            // CHAIR ZOOM SYNC - Grows to fill screen edges
             const chairImg = document.getElementById('chair-img');
             const chairContainer = document.getElementById('chair-container');
-            const chairScale = 0.8 + (spotlightProgress * 0.35); // Sync approach filling the screen
+            const chairScale = 0.9 + (spotlightProgress * 0.25); 
             
             if (scrollY > 40) { 
                 chairContainer.style.opacity = Math.min(0.3 + (spotlightProgress * 2.5), 1);
                 chairImg.style.transform = `scale(${chairScale})`;
             } else { 
                 chairContainer.style.opacity = '0.3'; 
-                chairImg.style.transform = 'scale(0.8)';
+                chairImg.style.transform = 'scale(0.9)';
             }
 
             const revealTrigger = vh * 0.6;
