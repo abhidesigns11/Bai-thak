@@ -51,7 +51,7 @@
         }
 
         .four-zero-styled {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(150, 150, 150, 0.2) 100%);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(150, 150, 150, 0.2) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -65,7 +65,7 @@
 
         /* LIGHT LOW GLOW BORDERS FOR ALL CARDS */
         .card-light-glow {
-            border: 1px solid rgba(230, 126, 34, 0.12);
+            border: 1px solid rgba(230, 126, 34, 0.1);
             box-shadow: 0 0 20px rgba(230, 126, 34, 0.02);
             transition: all 0.4s ease;
         }
@@ -113,7 +113,7 @@
 </head>
 <body class="font-sans overflow-x-hidden">
 
-    <!-- Scroll Hint -->
+    <!-- Scroll To Reveal Initial Hint -->
     <div id="initial-reveal-hint" class="fixed inset-0 z-[21] flex flex-col items-center justify-center pointer-events-none transition-opacity duration-1000">
         <p class="font-art italic text-white/40 text-2xl md:text-3xl tracking-[0.2em] animate-float uppercase">Scroll to reveal</p>
         <div class="w-px h-24 bg-gradient-to-b from-white/20 to-transparent mt-8"></div>
@@ -126,14 +126,14 @@
         </div>
         <div class="hidden md:flex gap-8 text-sm font-medium opacity-70">
             <a href="#" class="hover:text-white transition-colors">Home</a>
+            <a href="#performers" class="hover:text-white transition-colors">Performers</a>
             <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
             <a href="#team" class="hover:text-white transition-colors">The Team</a>
-            <a href="#participate" class="hover:text-white transition-colors">Perform</a>
         </div>
         <a href="https://utsavs.app/events/baithak-open-mic-40---anniversary-special-zkkji" target="_blank" class="bg-white text-black text-sm font-bold px-6 py-2 rounded-full hover:scale-95 transition-transform shrink-0">Book Tickets</a>
     </nav>
 
-    <!-- 2. Hero Reveal -->
+    <!-- 2. Hero Reveal Section -->
     <section class="relative h-[300vh] bg-black !z-10" id="hero">
         <div class="spotlight-overlay" id="spotlight"></div>
         <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden px-6">
@@ -145,7 +145,7 @@
                 <h1 class="font-art font-black text-7xl md:text-[10rem] leading-none mb-8 tracking-tighter uppercase">
                     <span class="bai-styled">BAI</span><span class="thak-styled">THAK</span> <span class="four-zero-styled">4.0</span>
                 </h1>
-                <p class="anniversary-typo text-xl md:text-3xl opacity-50 mb-12 text-white">Anniversary Special</p>
+                <p class="anniversary-typo text-xl md:text-3xl opacity-50 mb-12">Anniversary Special</p>
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="https://utsavs.app/events/baithak-open-mic-40---anniversary-special-zkkji" target="_blank" class="bg-white text-black font-bold px-10 py-4 rounded-full text-sm transition-all hover:scale-105">Get Tickets (₹99)</a>
                 </div>
@@ -159,7 +159,7 @@
             <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center text-center group card-light-glow">
                 <div class="card-visual cover"><img src="https://cdn.phototourl.com/free/2026-06-27-dc1c9dfd-54c6-4241-be50-0d189912837f.jpg" alt="Venue" class="grayscale group-hover:grayscale-0 transition-all"></div>
                 <h3 class="font-syne font-bold text-2xl mb-1 uppercase tracking-tighter">Vapi</h3>
-                <p class="opacity-50 text-xs">Global Tea Cafe, Chharwada</p>
+                <p class="opacity-50 text-xs text-white">Global Tea Cafe, Chharwada</p>
             </div>
             <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center text-center group card-light-glow">
                 <div class="card-visual"><img src="https://cdn.phototourl.com/free/2026-06-27-1fc0bb48-b578-42df-bfdb-94d00888864e.png" alt="Date"></div>
@@ -179,8 +179,50 @@
         </div>
     </section>
 
-    <!-- 4. Team (Owners Only) -->
-    <section id="team" class="px-8 py-32 bg-surface">
+    <!-- 4. Performer Cards -->
+    <section id="performers" class="px-8 py-32 bg-surface border-t border-white/5">
+        <div class="max-w-7xl mx-auto text-center mb-24">
+            <h2 class="font-art font-bold text-5xl mb-4 italic text-white uppercase tracking-tighter">The Headliners</h2>
+            <p class="opacity-30 uppercase tracking-[0.2em] text-[10px]">Spotlight Performers of Baithak 4.0</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Nadeem -->
+            <div class="glass p-6 rounded-[2.5rem] flex flex-col items-center text-center card-light-glow group">
+                <div class="w-full aspect-square rounded-[2rem] overflow-hidden mb-6 border-2 border-accent/10 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="https://cdn.phototourl.com/free/2026-06-29-e1d112f8-c672-403a-a40c-6edfe6deef33.jpg" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-art font-bold text-2xl text-white">Nadeem</h4>
+                <p class="text-accent text-[10px] font-bold uppercase tracking-widest opacity-60">Rap Music</p>
+            </div>
+            <!-- Tanuja Debnath (Updated Link) -->
+            <div class="glass p-6 rounded-[2.5rem] flex flex-col items-center text-center card-light-glow group">
+                <div class="w-full aspect-square rounded-[2rem] overflow-hidden mb-6 border-2 border-accent/10 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="https://cdn.phototourl.com/free/2026-06-29-5c72fadf-1387-4ec1-a7b6-183623627929.jpg" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-art font-bold text-2xl text-white">Tanuja Debnath</h4>
+                <p class="text-accent text-[10px] font-bold uppercase tracking-widest opacity-60">Poetry</p>
+            </div>
+            <!-- Suraj Prakash Mandal -->
+            <div class="glass p-6 rounded-[2.5rem] flex flex-col items-center text-center card-light-glow group">
+                <div class="w-full aspect-square rounded-[2rem] overflow-hidden mb-6 border-2 border-accent/10 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="https://cdn.phototourl.com/free/2026-06-29-cb44e480-00bf-4da1-bc27-6a6221604bd2.jpg" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-art font-bold text-2xl text-white">Suraj Prakash Mandal</h4>
+                <p class="text-accent text-[10px] font-bold uppercase tracking-widest opacity-60">Stand up Comedy</p>
+            </div>
+            <!-- Janvi Gupta -->
+            <div class="glass p-6 rounded-[2.5rem] flex flex-col items-center text-center card-light-glow group">
+                <div class="w-full aspect-square rounded-[2rem] overflow-hidden mb-6 border-2 border-accent/10 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="https://cdn.phototourl.com/free/2026-06-29-2f7a775b-f025-45df-959c-56aaa36bfcd9.jpg" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-art font-bold text-2xl text-white">Janvi Gupta</h4>
+                <p class="text-accent text-[10px] font-bold uppercase tracking-widest opacity-60">Singing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Visionaries -->
+    <section id="team" class="px-8 py-32 bg-background">
         <div class="max-w-7xl mx-auto text-center mb-20">
             <h2 class="font-art font-bold text-5xl mb-4 italic text-white">The Visionaries</h2>
             <p class="opacity-30 uppercase tracking-[0.2em] text-[10px]">The hearts behind the mic</p>
@@ -190,7 +232,7 @@
                 <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 glass p-2 grayscale group-hover:grayscale-0 transition-all border border-accent/20">
                     <img src="https://cdn.phototourl.com/free/2026-06-27-b25af858-6cb2-47b6-9134-ee0ceadc411b.jpg" class="w-full h-full object-cover rounded-full" alt="Ashwin Tiwari">
                 </div>
-                <h4 class="font-art font-bold text-2xl mb-1">Ashwin Tiwari</h4>
+                <h4 class="font-art font-bold text-2xl mb-1 text-white">Ashwin Tiwari</h4>
                 <p class="text-accent text-[10px] font-bold uppercase tracking-widest mb-2 opacity-60">Owner</p>
                 <a href="https://www.instagram.com/ashuu_0695/" target="_blank" class="text-xs opacity-40 hover:opacity-100 transition-opacity">@ashuu_0695</a>
             </div>
@@ -198,65 +240,47 @@
                 <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 glass p-2 border-white/10 border grayscale group-hover:grayscale-0 transition-all">
                     <img src="https://cdn.phototourl.com/free/2026-06-27-23b29472-110f-4050-9d71-e694f0d0d918.jpg" class="w-full h-full object-cover rounded-full" alt="Praveen">
                 </div>
-                <h4 class="font-art font-bold text-2xl mb-1">Praveen</h4>
+                <h4 class="font-art font-bold text-2xl mb-1 text-white">Praveen</h4>
                 <p class="text-white text-[10px] font-bold uppercase tracking-widest mb-2 opacity-50">Founder</p>
                 <a href="https://www.instagram.com/_praveen_74/" target="_blank" class="text-xs opacity-40 hover:opacity-100 transition-opacity">@_praveen_74</a>
             </div>
         </div>
     </section>
 
-    <!-- 5. Legacy Gallery -->
+    <!-- 6. Legacy Gallery -->
     <section id="gallery" class="px-8 py-32 bg-black border-t border-white/5">
         <h2 class="font-art font-bold text-5xl text-center mb-20 uppercase tracking-tighter text-white opacity-40 italic">Legacy of 3.0</h2>
         <div class="max-w-7xl mx-auto masonry">
-            <div class="masonry-item rounded-[2.5rem] overflow-hidden group"><img src="https://cdn.phototourl.com/free/2026-06-27-5cd26591-dec3-45aa-8d10-c8488519f708.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all"></div>
-            <div class="masonry-item rounded-[2.5rem] overflow-hidden group"><img src="https://cdn.phototourl.com/free/2026-06-27-ebe846a9-0f9d-4e46-84ae-1e682234a8e4.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all"></div>
-            <div class="masonry-item rounded-[2.5rem] overflow-hidden group"><img src="https://cdn.phototourl.com/free/2026-06-27-ccdb1773-f2a6-49d0-970f-670ce5d773f1.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all"></div>
+            <div class="masonry-item rounded-[2.5rem] overflow-hidden group"><img src="https://cdn.phototourl.com/free/2026-06-27-5cd26591-dec3-45aa-8d10-c8488519f708.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all duration-700"></div>
+            <div class="masonry-item rounded-[2.5rem] overflow-hidden group"><img src="https://cdn.phototourl.com/free/2026-06-27-ebe846a9-0f9d-4e46-84ae-1e682234a8e4.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all duration-700"></div>
+            <div class="masonry-item rounded-[2.5rem] overflow-hidden group"><img src="https://cdn.phototourl.com/free/2026-06-27-ccdb1773-f2a6-49d0-970f-670ce5d773f1.jpg" class="w-full grayscale opacity-50 group-hover:grayscale-0 transition-all duration-700"></div>
         </div>
     </section>
 
-    <!-- 6. Pricing (Simplified) -->
-    <section class="px-8 py-32 bg-surface border-t border-white/5">
-        <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] text-center card-light-glow">
-            <h2 class="font-art text-4xl mb-12 uppercase tracking-tighter text-white">Ticket Selection</h2>
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="p-8 bg-black/40 rounded-[2.5rem] border border-accent/20">
-                    <h4 class="font-art text-xl text-white mb-2 opacity-60">Audience</h4>
-                    <span class="font-art text-5xl text-white">₹99</span>
-                </div>
-                <div class="p-8 bg-black/40 rounded-[2.5rem] border border-accent/20">
-                    <h4 class="font-art text-xl text-white mb-2 opacity-60">Performer</h4>
-                    <span class="font-art text-5xl text-white">₹79</span>
-                </div>
-            </div>
-            <a href="https://utsavs.app/events/baithak-open-mic-40---anniversary-special-zkkji" target="_blank" class="inline-block w-full max-w-md bg-white text-black font-bold py-5 rounded-full text-center hover:bg-primary transition-all uppercase text-sm tracking-widest">Register via Utsavs</a>
-        </div>
-    </section>
-
-    <!-- 7. Registration Steps -->
-    <section id="participate" class="max-w-5xl mx-auto px-8 py-32 border-t border-white/5">
-        <h2 class="font-art font-bold text-5xl text-center mb-4 uppercase tracking-tighter text-white">Performer Rules</h2>
-        <p class="text-center opacity-40 mb-20 text-[10px] tracking-[0.4em] uppercase font-bold">3 Steps to the spotlight</p>
+    <!-- 7. Performer Rules -->
+    <section id="participate" class="max-w-5xl mx-auto px-8 py-32 border-t border-white/5 text-center">
+        <h2 class="font-art font-bold text-5xl mb-4 uppercase tracking-tighter text-white italic">Performer Rules</h2>
+        <p class="opacity-40 mb-20 text-[10px] tracking-[0.4em] uppercase font-bold">3 Steps to the spotlight</p>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="glass p-12 rounded-[3rem] group card-light-glow">
                 <div class="w-12 h-12 glass rounded-full flex items-center justify-center font-bold mb-8 group-hover:bg-white group-hover:text-black transition-all">1</div>
                 <h4 class="font-art font-bold text-2xl mb-4 text-white">Share Story</h4>
-                <p class="opacity-50 text-sm leading-relaxed">Put our recent 4.0 announcement reel or post on your Instagram Story and share it with friends.</p>
+                <p class="opacity-50 text-sm leading-relaxed text-left">Put our recent 4.0 announcement reel or post on your Instagram Story and share it with friends.</p>
             </div>
             <div class="glass p-12 rounded-[3rem] group card-light-glow">
                 <div class="w-12 h-12 glass rounded-full flex items-center justify-center font-bold mb-8 group-hover:bg-white group-hover:text-black transition-all">2</div>
-                <h4 class="font-art font-bold text-2xl mb-4 text-white">Tag Us</h4>
-                <p class="opacity-50 text-sm leading-relaxed">Tag <strong>@baithak.vapi</strong> in your story so our curators can verify and review your entry.</p>
+                <h4 class="font-serif font-bold text-2xl mb-4 text-white">Tag Us</h4>
+                <p class="opacity-50 text-sm leading-relaxed text-left">Tag <strong>@baithak.vapi</strong> in your story so our curators can verify and review your entry.</p>
             </div>
             <div class="glass p-12 rounded-[3rem] border-accent/20 group card-light-glow">
                 <div class="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center font-bold mb-8">3</div>
                 <h4 class="font-art font-bold text-2xl mb-4 text-white">Redeem Code</h4>
-                <p class="opacity-50 text-sm leading-relaxed">DM us to collect your registration redeem code. Use code for discount on Performer Ticket!</p>
+                <p class="opacity-50 text-sm leading-relaxed text-left">DM us to collect your registration redeem code. Use code for discount on Performer Ticket!</p>
             </div>
         </div>
     </section>
 
-    <!-- 8. Venue -->
+    <!-- 8. Venue & Black Map -->
     <section id="venue" class="px-8 py-32 bg-black border-t border-white/5">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
             <div class="md:w-1/2">
@@ -279,9 +303,8 @@
         </div>
     </section>
 
-    <!-- 9. Footer -->
+    <!-- 9. Footer with Credits -->
     <footer class="bg-background pt-40 pb-16 relative overflow-hidden text-center">
-        <!-- Giant Background Text -->
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 font-art font-black text-[20vw] opacity-[0.03] leading-none select-none pointer-events-none uppercase tracking-tighter">
             <span class="bai-styled">BAI</span><span class="thak-styled">THAK</span>
         </div>
@@ -290,7 +313,7 @@
             <div class="font-art font-black text-5xl tracking-tighter uppercase mb-12">
                 <span class="bai-styled">BAI</span><span class="thak-styled">THAK</span> <span class="four-zero-styled">4.0</span>
             </div>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-12 mb-16 opacity-50 font-bold tracking-widest uppercase text-xs">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12 mb-20 opacity-50 font-bold tracking-widest uppercase text-xs">
                 <a href="https://www.instagram.com/baithak.vapi/" target="_blank" class="hover:text-white transition-all">Instagram</a>
                 <a href="mailto:baithak.vapi@gmail.com" class="hover:text-white transition-all">Contact Us</a>
             </div>
@@ -324,12 +347,15 @@
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const vh = window.innerHeight;
+            
             initialHint.style.opacity = Math.max(0, 1 - (scrollY / 300));
             const spotlightProgress = Math.min(scrollY / (vh * 1.5), 1);
             const radius = 10 + (spotlightProgress * 140); 
             spotlight.style.background = `radial-gradient(circle at 50% 0%, transparent 0%, transparent ${radius}%, #000 ${radius + 15}%)`;
+
             if (scrollY > 40) { chairContainer.style.opacity = Math.min(0.3 + (spotlightProgress * 2), 1); } 
             else { chairContainer.style.opacity = '0.3'; }
+
             const revealTrigger = vh * 0.6;
             if (scrollY > revealTrigger) {
                 heroContent.style.opacity = '1';
@@ -346,4 +372,4 @@
         spotlight.style.background = `radial-gradient(circle at 50% 0%, transparent 10%, #000 25%)`;
     </script>
 </body>
-                    </html>
+</html>
